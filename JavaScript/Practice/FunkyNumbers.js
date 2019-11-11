@@ -2,11 +2,13 @@
  * By: Alonso Ortiz - 08/Nov/2019
  * From: https://codeforces.com/problemset/problem/192/A
  *
- * As you very well know, this year's funkiest numbers are so called triangular numbers (that is, integers that are representable as k(k+1) / 2, 
- * where k is some positive integer), and the coolest numbers are those that are representable as a sum of two triangular numbers.
+ * As you very well know, this year's funkiest numbers are so called triangular numbers 
+ * (that is, integers that are representable as k(k+1) / 2, where k is some positive integer), 
+ * and the coolest numbers are those that are representable as a sum of two triangular numbers.
  * 
- * A well-known hipster Andrew adores everything funky and cool but unfortunately, he isn't good at maths. Given number n, help him define whether 
- * this number can be represented by a sum of two triangular numbers (not necessarily different)!
+ * A well-known hipster Andrew adores everything funky and cool but unfortunately, 
+ * he isn't good at maths. Given number n, help him define whether this number can be represented 
+ * by a sum of two triangular numbers (not necessarily different)!
  */
 function funkyNumbers(n) { 
 
@@ -53,11 +55,15 @@ function triangleNumbers(x) {
     return f;
 }
 
-var test1 = funkyNumbers(256);   // --> YES
-console.log('Is 256 a Funky Number?   -> ' + test1); 
-
-var test2 = funkyNumbers(512);   // --> NO
-console.log('Is 512 a Funky Number?   -> ' + test2); 
-
-var test3 = funkyNumbers(87180); // --> YES
-console.log('Is 87180 a Funky Number? -> ' + test3); 
+//stdin → stdout
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+ 
+readline.on('line', n => {
+    readline.close();
+    
+    let res = funkyNumbers(n);
+    console.log('Is ' + n + ' a Funky Number? -> ' + res);
+});
