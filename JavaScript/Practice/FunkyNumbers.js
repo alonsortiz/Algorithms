@@ -10,12 +10,15 @@
  */
 function funkyNumbers(n) { 
 
-    var maxTriangle = maxTrianglePossible(n);
     var funkyNumber = 'NO';
+
+    var maxTriangle = maxTrianglePossible(n);
 
     for(let i = maxTriangle; i > 0; i--) {
         var firstTriangle = triangleNumbers(i);
         var rem = n - firstTriangle;
+
+        if(rem === 0) continue;
 
         var secFactor = maxTrianglePossible(rem);
         var secTriangle = triangleNumbers(secFactor);
