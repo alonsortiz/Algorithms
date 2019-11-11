@@ -13,7 +13,7 @@ function funkyNumbers(n) {
     var maxTriangle = maxTrianglePossible(n);
     var funkyNumber = 'NO';
 
-    for(i = maxTriangle; i > 0; i--) {
+    for(let i = maxTriangle; i > 0; i--) {
         var firstTriangle = triangleNumbers(i);
         var rem = n - firstTriangle;
 
