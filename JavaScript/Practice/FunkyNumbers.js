@@ -22,8 +22,6 @@ function funkyNumbers(n) {
 
         var triangles = firstTriangle + secTriangle;
 
-        console.log(triangles + ', ' + rem);
-
         if(triangles == n) {
             funkyNumber = 'YES';
             break;
