@@ -54,23 +54,4 @@ public class CommonString {
 
     }
 
-    private static final Scanner scanner = new Scanner(System.in);
-
-    public static void main(String[] args) throws IOException {
-
-        /*int lines = Integer.parseInt(scanner.nextLine());
-
-        String[] inputs = new String[lines];
-        
-        for (int i=0; i < lines; i++) {
-            inputs[i] = scanner.nextLine();
-        }*/
-
-        String res = commonString("aabcwdefghkij ksdfopweiraa wieourslakaaier asjoirwekjaa");
-
-        System.out.println(res);
-        
-        //scanner.close();
-
-    }
 }
