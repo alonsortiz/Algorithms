@@ -40,20 +40,19 @@ public class LostNumbers {
             incompleteSet.add(arr[i]);
         }
 
-        int n = min;
-
-        while(n < max) {
-            if(!incompleteSet.contains(n)) {
+        while(min < max) {
+            if(!incompleteSet.contains(min)) {
                 if(missingNums == "") {
-                    missingNums += n;
+                    missingNums += min;
                 } else {
-                    missingNums += " " + n;
+                    missingNums += " " + min;
                 }
             }
 
-            n++;
+            min++;
         }
 
         return missingNums;
     }
+
 }
