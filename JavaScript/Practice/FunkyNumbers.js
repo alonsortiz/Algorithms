@@ -45,8 +45,8 @@ const triangleNumbers = x => ( x * (x + 1) ) / 2;
 
 //stdin → stdout
 const readline = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout
+    input: process.stdin,
+    output: process.stdout
 });
  
 readline.on('line', n => {
