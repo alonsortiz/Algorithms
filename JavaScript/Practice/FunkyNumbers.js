@@ -14,24 +14,23 @@
 const funkyNumbers = n => {
     let funkyNumber = 'NO';
 
-    let maxTriangle = maxTrianglePossible(n);
+    const maxTriangle = maxTrianglePossible(n);
 
     for(let i = maxTriangle; i > 0; i--) {
-        let firstTriangle = triangleNumbers(i);
-        let rem = n - firstTriangle;
+        const firstTriangle = triangleNumbers(i);
+        const rem = n - firstTriangle;
 
         if(rem === 0) continue;
 
-        let secFactor = maxTrianglePossible(rem);
-        let secTriangle = triangleNumbers(secFactor);
+        const secFactor = maxTrianglePossible(rem);
+        const secTriangle = triangleNumbers(secFactor);
 
-        let triangles = firstTriangle + secTriangle;
+        const triangles = firstTriangle + secTriangle;
 
         if(triangles == n) {
             funkyNumber = 'YES';
             break;
-        } 
-        
+        }  
     }
     
     return funkyNumber; 
@@ -53,6 +52,6 @@ const readline = require('readline').createInterface({
 readline.on('line', n => {
     readline.close();
     
-    let res = funkyNumbers(n);
-    console.log('Is ' + n + ' a Funky Number? -> ' + res);
+    const res = funkyNumbers(n);
+    console.log(`Is ${n} a Funky Number? -> ${res}`);
 });
