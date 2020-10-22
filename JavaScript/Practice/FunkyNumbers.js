@@ -10,22 +10,22 @@
  * he isn't good at maths. Given number n, help him define whether this number can be represented 
  * by a sum of two triangular numbers (not necessarily different)!
  */
-function funkyNumbers(n) { 
 
-    var funkyNumber = 'NO';
+const funkyNumbers = n => {
+    let funkyNumber = 'NO';
 
-    var maxTriangle = maxTrianglePossible(n);
+    let maxTriangle = maxTrianglePossible(n);
 
     for(let i = maxTriangle; i > 0; i--) {
-        var firstTriangle = triangleNumbers(i);
-        var rem = n - firstTriangle;
+        let firstTriangle = triangleNumbers(i);
+        let rem = n - firstTriangle;
 
         if(rem === 0) continue;
 
-        var secFactor = maxTrianglePossible(rem);
-        var secTriangle = triangleNumbers(secFactor);
+        let secFactor = maxTrianglePossible(rem);
+        let secTriangle = triangleNumbers(secFactor);
 
-        var triangles = firstTriangle + secTriangle;
+        let triangles = firstTriangle + secTriangle;
 
         if(triangles == n) {
             funkyNumber = 'YES';
@@ -34,26 +34,12 @@ function funkyNumbers(n) {
         
     }
     
-    return funkyNumber;       
-} 
-
-function maxTrianglePossible(n) {
-    //k(k+1) / 2 = n where n is an integer
-    //k(k+1) = n*2
-    //k^2 + k - n*2 = 0 -> factors
-
-    var k = Math.floor( Math.sqrt(n*2) );
-
-    return k;
-
+    return funkyNumber; 
 }
 
-function triangleNumbers(x) {
-    
-    var f = ( x * (x + 1) ) / 2;
+const maxTrianglePossible = n => Math.floor( Math.sqrt(n*2) );
 
-    return f;
-}
+const triangleNumbers = x => ( x * (x + 1) ) / 2;
 
 //stdin → stdout
 const readline = require('readline').createInterface({
