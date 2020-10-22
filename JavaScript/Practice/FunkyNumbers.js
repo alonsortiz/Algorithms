@@ -34,7 +34,7 @@ const funkyNumbers = n => {
     }
     
     return funkyNumber; 
-}
+};
 
 //k(k+1) / 2 = n where n is an integer
 //k(k+1) = n*2
