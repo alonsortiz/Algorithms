@@ -37,6 +37,9 @@ const funkyNumbers = n => {
     return funkyNumber; 
 }
 
+//k(k+1) / 2 = n where n is an integer
+//k(k+1) = n*2
+//k^2 + k - n*2 = 0 -> factors
 const maxTrianglePossible = n => Math.floor( Math.sqrt(n*2) );
 
 const triangleNumbers = x => ( x * (x + 1) ) / 2;
