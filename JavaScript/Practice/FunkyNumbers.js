@@ -27,7 +27,7 @@ const funkyNumbers = n => {
 
         const triangles = firstTriangle + secTriangle;
 
-        if(triangles == n) {
+        if(triangles === n) {
             funkyNumber = 'YES';
             break;
         }  
